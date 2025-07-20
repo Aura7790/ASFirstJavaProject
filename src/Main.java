@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         // 1. Printati "Hello" in consola, iar pe rand nou, printati numele vostru.
-        String myName = "Aura Scripcariu";
+        String myName = "Aura";
         String greeting = "Hello";
         System.out.println(greeting + "\n" + myName);
         // 2. Printati rezultatul sumei a doua numere(orice numere)

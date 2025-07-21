@@ -27,7 +27,7 @@ public class Main {
         System.out.println(exerciseB);
 
         //c. 20 + -3*5 / 8
-        int exerciseC = 20 + -3*5 / 8;
+        float exerciseC = 20 + (float) (-3 * 5) /8;
         System.out.println(exerciseC);
 
         //d. 5 + 15 / 3 * 2 - 8 % 3

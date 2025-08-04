@@ -1,7 +1,5 @@
 public class Main2 {
     public static void main(String[] args) {
-        // LogicalOperations operation = new LogicalOperations();
-
         // 1. Printati "Hello" in consola, iar pe rand nou, printati numele vostru.
         String greeting = "Hello";
         String myName = "Aura";

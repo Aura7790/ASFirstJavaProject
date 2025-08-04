@@ -33,5 +33,6 @@ public class Main {
         //d. 5 + 15 / 3 * 2 - 8 % 3
         int exerciseD = 5 + 15 / 3 * 2 - 8 % 3;
         System.out.println(exerciseD);
+
     }
 }

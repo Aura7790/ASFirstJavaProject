@@ -32,7 +32,7 @@ public class LogicalOp {
     }
 
     // Lab 9, exercitiul 6
-    public String snowInWinter(int numberInput){
+    public String checkSnowInWinter(int numberInput){
         if (numberInput > 8 || numberInput == 6) {
             return "The amount of snow this winter was(cm): " + numberInput;
         }
@@ -42,7 +42,7 @@ public class LogicalOp {
     }
 
     // Lab 9, exercitiul 7
-    public String numberComparison(int numberInput){
+    public String checkNumberComparison(int numberInput){
         if (numberInput > 3 && numberInput != 4) {
             return "The number is greater than 3 and not equal to 4";
         }
@@ -58,7 +58,7 @@ public class LogicalOp {
     }
 
     // Lab 9, exercitiul 8
-    public String numberSwitch(int numberInput){
+    public String checkNumberSwitch(int numberInput){
         return switch (numberInput) {
             case 1 -> "The number is:  1 !";
             case 2 -> "The number is:  2 !";
@@ -92,9 +92,8 @@ public class LogicalOp {
     }
 
     // Lab 9, exercitiul 11
-    public String highestNumber (int firstInput, int secondInput, int thirdInput){
+    public String checkHighestNumber(int firstInput, int secondInput, int thirdInput){
         if (firstInput > secondInput && firstInput > thirdInput){
-            // System.out.println("Highest number is firstInput: " + firstInput);
             return "Highest number is :" + firstInput;
         }
         else if (secondInput > firstInput && secondInput > thirdInput) {

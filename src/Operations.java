@@ -25,7 +25,7 @@ public class Operations {
     }
 
     // 3. Scrieti o metoda java, care sa afiseze urmatorul model: "Java" string on different lines
-    public static String myPattern (String firstRow, String secondRow, String thirdRow, String fourthRow){
+    public static String printPattern (String firstRow, String secondRow, String thirdRow, String fourthRow){
         String result = firstRow + "\n" + secondRow + "\n" + thirdRow + "\n" + fourthRow;
         return result;
     }
@@ -36,7 +36,7 @@ public class Operations {
     }
 
     // 5. Scrieti o metoda java, care sa afiseze urmatorul model: a face
-    public static String robotFace(String firstLine, String secondLine, String thirdLine, String fourthLine, String fifthLine){
+    public static String printRobotFace(String firstLine, String secondLine, String thirdLine, String fourthLine, String fifthLine){
         return firstLine + "\n" + secondLine + "\n" + thirdLine + "\n" + fourthLine + "\n" + fifthLine;
     }
 
@@ -58,7 +58,7 @@ public class Operations {
 
     // 9. Scrieti o metoda java, care primeste distanta (in metri) si timpul (ca si 3 numere: ore, minute, secunde),
     // si afiseaza viteza, in metri pe secunda, kilometrii pe ora si mile pe ora. (Indiciu: 1 mila = 1609 metri)
-    public static void speedCalculator(double distanceMeters, int hours, int minutes, int seconds) {
+    public static void calculateSpeed(double distanceMeters, int hours, int minutes, int seconds) {
         // Calculeaza timpul total in secunde
         double totalTimeInSeconds = hours * 3600 + minutes * 60 + seconds;
         // Calculeaza viteza in metri pe secunda

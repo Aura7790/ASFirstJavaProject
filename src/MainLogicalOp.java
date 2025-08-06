@@ -26,27 +26,27 @@ public class MainLogicalOp {
         System.out.println(op.checkWorkshopText2(text6, number4));
 
         // Lab 9, exercitiul 6
-        String snow1 = op.snowInWinter(6);
+        String snow1 = op.checkSnowInWinter(6);
         System.out.println(snow1);
-        String snow2 = op.snowInWinter(10);
+        String snow2 = op.checkSnowInWinter(10);
         System.out.println(snow2);
-        String snow3 = op.snowInWinter(8);
+        String snow3 = op.checkSnowInWinter(8);
         System.out.println(snow3);
-        String snow4 = op.snowInWinter(3);
+        String snow4 = op.checkSnowInWinter(3);
         System.out.println(snow4);
 
         // Lab 9, exercitiul 7
-        String num1 = op.numberComparison(7);
+        String num1 = op.checkNumberComparison(7);
         System.out.println(num1);
-        String num2 = op.numberComparison(4);
+        String num2 = op.checkNumberComparison(4);
         System.out.println(num2);
-        String num3 = op.numberComparison(2);
+        String num3 = op.checkNumberComparison(2);
         System.out.println(num3);
 
         // Lab 9, exercitiul 8
-        System.out.println(op.numberSwitch(1));
-        System.out.println(op.numberSwitch(5));
-        System.out.println(op.numberSwitch(7));
+        System.out.println(op.checkNumberSwitch(1));
+        System.out.println(op.checkNumberSwitch(5));
+        System.out.println(op.checkNumberSwitch(7));
 
         // Lab 9, exercitiul 9
         System.out.println(op.isNumberEven(5));
@@ -58,8 +58,8 @@ public class MainLogicalOp {
         System.out.println(op.isEligibleToVote(22));
 
         // Lab 9, exercitiul 11
-        System.out.println(op.highestNumber(7, 11, 99));
-        System.out.println(op.highestNumber(22, 13, -5));
-        System.out.println(op.highestNumber(11, 11, 11));
+        System.out.println(op.checkHighestNumber(7, 11, 99));
+        System.out.println(op.checkHighestNumber(22, 13, -5));
+        System.out.println(op.checkHighestNumber(11, 11, 11));
     }
 }

@@ -21,7 +21,7 @@ public class Main3 {
         String row2 = "   J   a a    v  v    a a";
         String row3 = "J  J  aaaaa    V V   aaaaa";
         String row4 = " JJ   a   a     V    a   a";
-        System.out.println(Operations.myPattern(row1, row2, row3, row4));
+        System.out.println(Operations.printPattern(row1, row2, row3, row4));
 
         // Scrieti o metoda java, care sa primeasca 3 parametrii de tip numar, si sa returneze media numerelor.
         int i = -1;
@@ -35,7 +35,7 @@ public class Main3 {
         String line3 = " |  ^  | ";
         String line4 = " | '-' | ";
         String line5 = " +-----+ ";
-        System.out.println(Operations.robotFace(line1, line2, line3, line4, line5));
+        System.out.println(Operations.printRobotFace(line1, line2, line3, line4, line5));
 
         // Scrieti o metoda java, care sa returneze restul impartirii a doua numere
         int firstNumber = 10;
@@ -54,6 +54,6 @@ public class Main3 {
 
         // Scrieti o metoda java, care primeste distanta (in metri) si timpul (ca si 3 numere: ore, minute, secunde),
         // si afiseaza viteza, in metri pe secunda, kilometrii pe ora si mile pe ora.
-        Operations.speedCalculator(505, 2, 17, 9);
+        Operations.calculateSpeed(505, 2, 17, 9);
     }
 }

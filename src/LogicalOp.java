@@ -104,4 +104,91 @@ public class LogicalOp {
         }
         return "All numbers are equal. Please provide other inputs!";
     }
+
+    // Lab 10, ex 1
+    public void printFromNumberPositive(int number){
+        for(int i=number; i<=100; i++){
+            System.out.println(i);
+        }
+    }
+
+    // Lab 10, ex 2
+    public void printFromNumberNegative(int number){
+        for(int i=number; i>=-100; i--){
+            System.out.println(i);
+        }
+    }
+
+    // Lab 10, ex 3
+    public void printCountBetweenTwoNumbers(int x, int y){
+        if (x < y){
+            for(int i=x; i<=y; i++){
+                System.out.println(i);
+            }
+        }
+        else if (x > y) {
+            for(int i=x; i>=y; i--){
+                System.out.println(i);
+            }
+        }
+        else {
+            System.out.println("The provided numbers are equal!");
+        }
+    }
+
+    // Lab 10, ex 4
+    public void printCountBetween(int x, int y){
+        int minNumber = Math.min(x, y);
+        int maxNumber = Math.max(x, y);
+        for(int i=minNumber; i<=maxNumber; i++) {
+            System.out.println(i);
+        }
+    }
+
+    // Lab 10, ex 5
+    public void printEvenNumbers(){
+        for(int i=0; i<=100; i++){
+            if (i % 2 == 0){
+                System.out.println(i);
+            }
+        }
+    }
+
+    // Lab 10, ex 6
+    public void printOddNumbers(){
+        for(int i=0; i<=100; i++){
+            if (i % 2 != 0){
+                System.out.println(i);
+            }
+        }
+    }
+
+    // Lab 10, ex 7
+    public int printSumOfNumbers(int number){
+        int sum = 0;
+        for (int i=number; i<=100; i++){
+            sum += i;
+        }
+        return sum;
+    }
+
+    // Lab 10, ex 8
+    public float printAverageOfNumbers(int n){
+        int sum = 0;
+        for (int i=n; i<=100; i++){
+            sum +=i;
+        }
+        return (float) sum/100;
+    }
+
+    // Lab 10, ex 9
+    public void printStars(int x){
+        for (int i=x; i>=1; i--){    // number of rows, decreases i after each row reducing the number of stars
+            for (int j=1; j<=i; j++){    // print stars in each row
+                System.out.print("*");
+            }
+            //Move to the next line after finishing one row
+            System.out.println();
+        }
+    }
 }

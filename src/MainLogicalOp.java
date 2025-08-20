@@ -61,5 +61,38 @@ public class MainLogicalOp {
         System.out.println(op.checkHighestNumber(7, 11, 99));
         System.out.println(op.checkHighestNumber(22, 13, -5));
         System.out.println(op.checkHighestNumber(11, 11, 11));
+
+        // Lab 10, ex 1
+        int x = 90;
+        op.printFromNumberPositive(x);
+
+        // Lab 10, ex 2
+        int y = -90;
+        op.printFromNumberNegative(-y);
+
+        // Lab 10, ex 3
+        int z = 7;
+        int w = 2;
+        op.printCountBetweenTwoNumbers(z, w);
+
+        // Lab 10, ex 4
+        op.printCountBetween(5, -1);
+
+        // Lab 10, ex 5
+        op.printEvenNumbers();
+
+        // Lab 10, ex 6
+        op.printOddNumbers();
+
+        // Lab 10, ex 7
+        int a = 76;
+        System.out.println(op.printSumOfNumbers(a));
+
+        // Lab 10, ex 8
+        int b = 10;
+        System.out.println(op.printAverageOfNumbers(b));
+
+        // Lab 10, ex 9
+        op.printStars(5);
     }
 }

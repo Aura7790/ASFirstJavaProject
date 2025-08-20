@@ -1,8 +1,43 @@
 package AnimalRescue;
 
 public class Food {
-    String foodName = "Pedigree";
-    double foodPrice = 99.10;
-    int foodQty = 5;
-    boolean foodAvailability = true;
+    private String foodName;
+    private double foodPrice;
+    private int foodQty;
+    private boolean foodAvailability;
+
+    // Getters
+    public String getFoodName() {
+        return foodName;
+    }
+
+    public double getFoodPrice() {
+        return foodPrice;
+    }
+
+    public int getFoodQty() {
+        return foodQty;
+    }
+
+    public boolean getFoodAvailability() {
+        return foodAvailability;
+    }
+
+    // Setters
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
+
+    public void setFoodPrice(double foodPrice) {
+        this.foodPrice = foodPrice;
+    }
+
+    public void setFoodQty(int foodQty) {
+        this.foodQty = foodQty;
+    }
+
+    public void setFoodAvailability(boolean foodAvailability) {
+        this.foodAvailability = foodAvailability;
+    }
 }

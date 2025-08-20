@@ -1,5 +1,3 @@
-package AnimalRescue;
-
 public class Dog {
     // Dogs' attributes
     String name = "Rudolph";

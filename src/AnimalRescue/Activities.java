@@ -1,5 +1,13 @@
 package AnimalRescue;
 
 public class Activities {
-    String activityName = "Hunting";
+    private String activityName;
+    // Getters
+    public String getActivityName(){
+        return activityName;
+    }
+    // Setters
+    public void setActivityName(String activityName){
+        this.activityName = activityName;
+    }
 }

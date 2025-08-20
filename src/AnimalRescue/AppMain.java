@@ -3,29 +3,45 @@ package AnimalRescue;
 public class AppMain {
     public static void main(String[] args) {
         Animal rescuedAnimal = new Animal();
-        System.out.println("The animal's name is: " + rescuedAnimal.animalName);
-        System.out.println("The animal's age is: " + rescuedAnimal.animalAge);
-        System.out.println("The animal's health level is: " + rescuedAnimal.animalHealthLevel);
-        System.out.println("The animal's hunger level is: " + rescuedAnimal.animalHungerLevel);
-        System.out.println("The animal's spirit state is: " + rescuedAnimal.animalSpiritState);
-        System.out.println("The animal's favourite food is: " + rescuedAnimal.animalFavouriteFood);
-        System.out.println("The animal's favourite activity is: " + rescuedAnimal.animalFavouriteActivity);
+        rescuedAnimal.setAnimalName("Max");
+        System.out.println("The animal name is: " + rescuedAnimal.getAnimalName());
+        rescuedAnimal.setAnimalAge(3);
+        System.out.println("The animal age is: " + rescuedAnimal.getAnimalAge());
+        rescuedAnimal.setAnimalHealthLevel(9);
+        System.out.println("The animal health level is: " + rescuedAnimal.getAnimalHealthLevel());
+        rescuedAnimal.setAnimalHungerLevel(6);
+        System.out.println("The animal hunger level is: " + rescuedAnimal.getAnimalHungerLevel());
+        rescuedAnimal.setAnimalSpiritState(9);
+        System.out.println("The animal spirit state is: " + rescuedAnimal.getAnimalSpiritState());
+        rescuedAnimal.setAnimalFavouriteFood("meat");
+        System.out.println("The animal favourite food is: " + rescuedAnimal.getAnimalFavouriteFood());
+        rescuedAnimal.setAnimalFavouriteActivity("running");
+        System.out.println("The animal favourite activity is: " + rescuedAnimal.getAnimalFavouriteActivity());
 
         Adopter adopter = new Adopter();
-        System.out.println("The adopter's name is: " + adopter.adopterName);
-        System.out.println("The adopter's available amount is is: " + adopter.adopterAvailableMoney + " $");
+        adopter.setAdopterName("Maria");
+        System.out.println("The adopter's name is: " + adopter.getAdopterName());
+        adopter.setAdopterAvailableMoney(1000);
+        System.out.println("The adopter's available amount is is: " + adopter.getAdopterAvailableMoney() + "Euro");
 
         Food animalFood = new Food();
-        System.out.println("The food name is: " + animalFood.foodName);
-        System.out.println("The food price is: " + animalFood.foodPrice + " $");
-        System.out.println("The food quantity is: " + animalFood.foodQty + " kg");
-        System.out.println("The food availability is: " + animalFood.foodAvailability);
+        animalFood.setFoodName("Pedigree");
+        System.out.println("The food name is: " + animalFood.getFoodName());
+        animalFood.setFoodPrice(20);
+        System.out.println("The food price is: " + animalFood.getFoodPrice() + " Euro");
+        animalFood.setFoodQty(2);
+        System.out.println("The food quantity is: " + animalFood.getFoodQty() + " kg");
+        animalFood.setFoodAvailability(true);
+        System.out.println("The food availability is: " + animalFood.getFoodAvailability());
 
         Activities animalActivity = new Activities();
-        System.out.println("The animal activity is: " + animalActivity.activityName);
+        animalActivity.setActivityName("Running");
+        System.out.println("The animal activity is: " + animalActivity.getActivityName());
 
         Vet animalVet = new Vet();
-        System.out.println("The vet name is: " + animalVet.vetName);
-        System.out.println("The vet specialty is: " + animalVet.vetSpecialty);
+        animalVet.setVetName("Marian Popescu");
+        System.out.println("The vet name is: " + animalVet.getVetName());
+        animalVet.setVetSpecialty("Nutrition");
+        System.out.println("The vet specialty is: " + animalVet.getVetSpecialty());
     }
 }

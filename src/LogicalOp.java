@@ -300,57 +300,28 @@ public class LogicalOp {
     // Lab 10, ex 10
     public void printCozaLozaWoza(){
         int x = 1;
-        int count = 0;
         while (x <= 110){
-            boolean taken = false;
-            count++;
-            if (x % 3 == 0){
-                System.out.print("Coza");
-                taken = true;
-            }
-            else if (x % 3 == 0 && x % 5 ==0){
-                System.out.print("CozaLoza");
-            }
-            else if (x % 3 == 0 & x % 7 ==0){
-                System.out.print("CozaWoza");
-            }
-            else if (x % 3 == 0 & x % 5 == 0 & x % 7 ==0){
-                System.out.print("CozaLozaWoza");
-            }
-
-            if (x % 5 == 0){
-                System.out.print("Loza");
-                taken = true;
-            }
-            else if (x % 5 == 0 & x % 7 ==0){
-                System.out.print("WozaLoza");
-            }
-            else if (x % 3 == 0 & x % 5 == 0 & x % 7 ==0){
-                System.out.print("CozaLozaWoza");
-            }
-
-            if (x % 7 == 0){
-                System.out.print("Woza");
-                taken = true;
-            }
-            else if (x % 5 == 0 & x % 7 ==0){
-                System.out.print("WozaLoza");
-            }
-            else if (x % 3 == 0 & x % 5 == 0 & x % 7 ==0){
-                System.out.print("CozaLozaWoza");
-            }
-
-            if (!taken) {
+            if (x % 3 == 0 && x % 5 == 0 && x % 7 == 0) {
+                System.out.print("CozaLozaWoza" + "\t");
+            } else if (x % 5 == 0 && x % 7 == 0) {
+                System.out.print("WozaLoza" + "\t");
+            } else if (x % 3 == 0 && x % 7 == 0) {
+                System.out.print("CozaWoza" + "\t");
+            } else if (x % 3 == 0 && x % 5 == 0) {
+                System.out.print("CozaLoza" + "\t");
+            } else if (x % 7 == 0) {
+                System.out.print("Woza" + "\t");
+            } else if (x % 5 == 0) {
+                System.out.print("Loza" + "\t");
+            } else if (x % 3 == 0) {
+                System.out.print("Coza" + "\t");
+            } else {
                 System.out.print(x + "\t");
             }
+            if (x % 11 == 0) {
+                System.out.println();
+            }
             x++;
-            if (count == 11){
-                System.out.print("\n");
-                count = 0;
-            }
-            else {
-                System.out.print("\t\t");
-            }
         }
     }
 }

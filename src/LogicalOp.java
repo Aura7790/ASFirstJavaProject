@@ -104,7 +104,7 @@ public class LogicalOp {
         }
         return "All numbers are equal. Please provide other inputs!";
     }
-
+    // Java FOR Loops
     // Lab 10, ex 1
     public void printFromNumberPositive(int number){
         for(int i=number; i<=100; i++){
@@ -189,6 +189,168 @@ public class LogicalOp {
             }
             //Move to the next line after finishing one row
             System.out.println();
+        }
+    }
+
+    // Java While Loops
+    // Lab 10, ex1
+    public void printFromNumberTo100(int x){
+        while (x <= 100){
+            System.out.println(x);
+            x++;
+        }
+    }
+
+    // Lab 10, ex2
+    public void printNumbersToMinus100(int x){
+        while (x >= -100){
+            System.out.println(x);
+            x--;
+        }
+    }
+
+    // Lab 10, ex3
+    public void printCountBetweenTwoNumbers2(int first, int second){
+        while (first <= second){
+            System.out.println(first);
+            first++;
+        }
+        while (first >= second){
+            System.out.println(first);
+            first--;
+        }
+    }
+
+    // Lab 10, ex4
+    public void printCountBetweenTwoNumbers3(int number1, int number2){
+        int x = Math.min(number1, number2);
+        int y = Math.max(number1, number2);
+        int i = x;
+        while (i <= y){
+            System.out.println(i);
+            i++;
+        }
+    }
+
+    // Lab 10, ex 5
+    public void printEvenNumbers2(){
+        int i = 0;
+        while (i <= 100){
+            i++;
+            if (i % 2 == 0){
+                System.out.println(i);
+            }
+        }
+    }
+
+    // Lab 10, ex 6
+    public void printOddNumbers2(){
+        int i = 0;
+        while(i < 100){
+            i++;
+            if (i % 2 != 0){
+                System.out.println(i);
+            }
+        }
+    }
+
+    // Lab 10, ex 7
+    public void printAvgFromNumberToNumber(int x, int y){
+        float sum = 0;
+        int count  = 0;
+        while (x <= y){
+            sum = sum + x;
+            x++;
+            count++;
+        }
+        System.out.println(sum);
+        System.out.println(sum/count);
+    }
+
+    // Lab 10, ex 8
+    public float printAvgNumbersFromInterval(int x, int y){
+        float sum = 0;
+        int count = 0;
+        while (x <= y){
+            if (x % 7 == 0) {
+                sum = sum + x;
+            }
+            x++;
+            count++;
+        }
+        return (sum/count);
+    }
+
+    // Lab 10, ex 9
+    public void printFibonacciNumbers(int x){
+        int first = 0;
+        int second = 1;
+        System.out.println(first);
+        System.out.println(second); // primele 2 numere
+        int count = 3; // counterul incepe de la 3 deoarece am printat deja primele 2 mai sus
+        while (count <= x){
+            int next = first + second; // urmatorul nr din sirul lui Fibonacci
+            System.out.println(next);
+            first = second;
+            second = next;
+            count++;
+        }
+    }
+
+    // Lab 10, ex 10
+    public void printCozaLozaWoza(){
+        int x = 1;
+        int count = 0;
+        while (x <= 110){
+            boolean taken = false;
+            count++;
+            if (x % 3 == 0){
+                System.out.print("Coza");
+                taken = true;
+            }
+            else if (x % 3 == 0 && x % 5 ==0){
+                System.out.print("CozaLoza");
+            }
+            else if (x % 3 == 0 & x % 7 ==0){
+                System.out.print("CozaWoza");
+            }
+            else if (x % 3 == 0 & x % 5 == 0 & x % 7 ==0){
+                System.out.print("CozaLozaWoza");
+            }
+
+            if (x % 5 == 0){
+                System.out.print("Loza");
+                taken = true;
+            }
+            else if (x % 5 == 0 & x % 7 ==0){
+                System.out.print("WozaLoza");
+            }
+            else if (x % 3 == 0 & x % 5 == 0 & x % 7 ==0){
+                System.out.print("CozaLozaWoza");
+            }
+
+            if (x % 7 == 0){
+                System.out.print("Woza");
+                taken = true;
+            }
+            else if (x % 5 == 0 & x % 7 ==0){
+                System.out.print("WozaLoza");
+            }
+            else if (x % 3 == 0 & x % 5 == 0 & x % 7 ==0){
+                System.out.print("CozaLozaWoza");
+            }
+
+            if (!taken) {
+                System.out.print(x + "\t");
+            }
+            x++;
+            if (count == 11){
+                System.out.print("\n");
+                count = 0;
+            }
+            else {
+                System.out.print("\t\t");
+            }
         }
     }
 }

@@ -62,6 +62,7 @@ public class MainLogicalOp {
         System.out.println(op.checkHighestNumber(22, 13, -5));
         System.out.println(op.checkHighestNumber(11, 11, 11));
 
+        // Java FOR Loops
         // Lab 10, ex 1
         int x = 90;
         op.printFromNumberPositive(x);
@@ -94,5 +95,37 @@ public class MainLogicalOp {
 
         // Lab 10, ex 9
         op.printStars(5);
+
+
+        // Java While Loops
+        // Lab 10, ex1
+        op.printFromNumberTo100(95);
+
+        // Lab 10, ex2
+        op.printNumbersToMinus100(-90);
+
+        // Lab 10, ex3
+        op.printCountBetweenTwoNumbers2(7, 20);
+
+        // Lab 10, ex4
+        op.printCountBetweenTwoNumbers3(9, 2);
+
+        //Lab 10, ex 5
+        op.printEvenNumbers2();
+
+        // Lab 10, ex 6
+        op.printOddNumbers2();
+
+        // Lab 10, ex 7
+        op.printAvgFromNumberToNumber(111, 8899);
+
+        // Lab 10, ex 8
+        System.out.println(op.printAvgNumbersFromInterval(7, 27));
+
+        // Lab 10, ex 9
+        op.printFibonacciNumbers(20);
+
+        // Lab 10, ex 10
+        op.printCozaLozaWoza();
     }
 }

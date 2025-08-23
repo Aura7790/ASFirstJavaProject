@@ -427,4 +427,133 @@ public class LogicalOp {
         return newArray;
     }
 
+    // Lab 11 - Tema optionala - Java Arrays
+    // 1. Creati o metoda care insereze un element pe o pozitie specifica intr-un array.
+    public int [] insertOnPositionInArray(int[] myArray, int element, int position){
+        if (position < 0 || position > myArray.length){
+            System.out.println("Invalid position!");
+        }
+        int[] newArray = new int[myArray.length + 1];
+        // copy elements before the position
+        for (int i = 0; i < position; i++) {
+            newArray[i] = myArray[i];
+        }
+        // insert new element
+        newArray[position] = element;
+        // copy the remaining elements
+        for (int i = position; i < myArray.length; i++){
+            newArray[i+1] = myArray[i];
+        }
+        return newArray;
+    }
+
+    // 2. Creati o metoda care sa gaseasca cel mai mare si cel mai mic numar dintr-un array.
+    public int[] getMinMax(int[] myArray){
+        int min = myArray[0];
+        int max = myArray[0];
+        for(int i = 1; i < myArray.length; i++){
+            if (myArray[i] < min){
+                min = myArray[i];
+            }
+            if (myArray[i] > max){
+                max = myArray[i];
+            }
+        }
+        return new int[]{min, max};
+    }
+
+    // 3. Creati o metoda care sa inverseze valorile unui array de int-uri.
+    public void invertValuesInArray(int[] myArray){
+        int start = 0;
+        int end = myArray.length-1;
+        while (start < end){
+            // invert myArray start and myArray end
+            int temp = myArray[start];
+            myArray[start] = myArray[end];
+            myArray[end] = temp;
+            start ++;
+            end --;
+        }
+    }
+
+    // 4. Creati o metoda care sa gaseasca toate valorile duplicate dintr-un array.
+    public void findDuplicates(int[] myArray){
+        boolean hasDuplicates = false;
+        for (int i = 0; i < myArray.length; i++){
+            // check if element was already counted
+            boolean alreadyCounted = false;
+            for (int j = 0; j < i; j++){
+                if (myArray[i] == myArray[j]){
+                    alreadyCounted = true;
+                    break;
+                }
+            }
+            if (alreadyCounted){
+                continue;  // skip it if already counted
+            }
+            // count occurrences in the rest of array
+            int count = 0;
+            for (int k = i + 1; k < myArray.length; k++){
+                if(myArray[i] == myArray[k]){
+                    count++;
+                }
+            }
+            // if duplicates exists, print the number
+            if (count > 0){
+                System.out.print(myArray[i] + " ");
+                hasDuplicates = true;
+            }
+        }
+        // handle case for no duplicates
+        if (!hasDuplicates){
+            System.out.print("No duplicates");
+        }
+        System.out.println();
+    }
+
+    //5. Creati o metoda care sa gaseasca toate elementele comune intre doua array-uri (array de String).
+    public void findCommonElements(String[] arr1, String[] arr2){
+        boolean found = false;
+        for (int i = 0; i < arr1.length; i ++){
+            // check if the element exists in arr2
+            for (int j = 0; j < arr2.length; j++){
+                if (arr1[i].equals(arr2[j])){
+                    boolean alreadyPrinted = false;
+                    // make sure duplicates are not printed from arr1
+                    for (int k = 0; k < i; k++){
+                        if(arr1[i].equals(arr1[k])){
+                            alreadyPrinted = true;
+                            break;
+                        }
+                    }
+                    // if a common element was found and hasn't been printed yet, print it
+                    if (!alreadyPrinted){
+                        System.out.print(arr1[i] + " ");
+                        found  = true;
+                    }
+                    break; // stop checking arr2 once match was found
+                }
+            }
+            if (!found) {
+                System.out.print("No common elements found");
+            }
+        }
+        System.out.println();
+    }
+
+    // 6. Creati o metoda care sa primeasca un array de numere ne-ordonat, si sa il returneze ordonat crescator.
+    public int[] sortMyArray(int[] myArray){
+        int n = myArray.length;
+        // Bubble sort
+        for (int i = 0; i < n - 1; i++){
+            for (int j = 0; j < n - 1 - i; j++){
+                if (myArray[j] > myArray[j+1]){
+                    int temp = myArray[j];
+                    myArray[j] = myArray[j+1];
+                    myArray[j+1] = temp;
+                }
+            }
+        }
+        return myArray;   // sorted array
+    }
 }

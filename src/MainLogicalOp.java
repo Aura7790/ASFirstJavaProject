@@ -177,5 +177,46 @@ public class MainLogicalOp {
         int[] arr1 = {9, 19, 29, 59, 39, 49, 9, 22, 0, 30};
         int[] arr2 = new int[10];
         System.out.println(Arrays.toString(op.copyArrayFromOneToAnother(arr1, arr2)));
+
+        // Lab 11 - Tema optionala - Java Arrays, ex 1
+        int[] arr3 = {1, 2, 3 ,4, 5, 6, 7, 8};
+        int element = 77;
+        int position = 0;
+        numbers = op.insertOnPositionInArray(arr3, element, position);
+        for (int n = 0; n < numbers.length; n++){
+            System.out.print(numbers[n] + " ");
+        }
+
+        // Lab 11 - Tema optionala - Java Arrays, ex 2
+        int[] numbers2 = {11, 22, 44, 3, 17, 99};
+        int[] minMax = op.getMinMax(numbers2);
+        System.out.println();
+        System.out.println("Min number:" + minMax[0]);
+        System.out.println("Max number:" + minMax[1]);
+
+        // Lab 11 - Tema optionala - Java Arrays, ex 3
+        int[] numbers3 = {17, 22, 44, 3, 19, 99, 100, 110, 7, 100, 17};
+        op.invertValuesInArray(numbers3);
+        // Print inverted array
+        for (int j = 0; j < numbers3.length; j++){
+            System.out.print(numbers3[j] + " ");
+        }
+
+        // Lab 11 - Tema optionala - Java Arrays, ex 4
+        System.out.println();
+        op.findDuplicates(numbers3);
+
+        // Lab 11 - Tema optionala - Java Arrays, ex 5
+        String[] array1 = {"apple", "pear", "banana", "plum", "cat"};
+        String[] array2 = {"cat", "dog", "elephant", "bear", "apple"};
+        op.findCommonElements(array1, array2);
+
+        // Lab 11 - Tema optionala - Java Arrays, ex 6
+        int[] numArray = {2, -7, 100, 97, 77, 101, -5, 20, 5, 3, 0};
+        int[] sortedNumbers = op.sortMyArray(numArray);
+        // Print sorted array
+        for (int p = 0; p < sortedNumbers.length; p++){
+            System.out.print(sortedNumbers[p] + " ");
+        }
     }
 }

@@ -1,6 +1,7 @@
 public class MainLogicalOp {
     public static void main(String[] args) {
         LogicalOp op = new LogicalOp();
+        /*
         // Lab 9, exercitiul 3
         int biggest = op.checkBiggerNumber(11,99);
         System.out.println("The bigger number is: " + biggest);
@@ -127,5 +128,40 @@ public class MainLogicalOp {
 
         // Lab 10, ex 10
         op.printCozaLozaWoza();
+    }
+    */
+        // Lab 11 (Java Arrays), ex 2
+        op.getArrayTo100();
+
+        // Lab 11 (Java Arrays), ex 3
+        int[] evens = new int[50];    // only 50 numbers are even
+        op.getEvenArrayTo100(evens);
+        int i = 0;
+        while(i < evens.length){
+            System.out.print(evens[i] + " ");
+            i++;
+        }
+
+        // Lab 11 (Java Arrays), ex 4
+        int[] myArray = {15, 17, 22, 1, 44};
+        float avg = op.getAverageMyArray(myArray);
+        System.out.println("\n" + avg);
+
+        // Lab 11 (Java Arrays), ex 5
+        String[] myStringArr = {"map", "car", "Flower", "cat", "Book"};
+        boolean result1 = op.getMyStringArray(myStringArr, "cat");
+        System.out.println(result1);
+        System.out.println(op.getMyStringArray(myStringArr, "morning"));
+
+        // Lab 11 (Java Arrays), ex 6
+        int[] myArrayOfInts = {22, 45, 99, 101, 78, 43, 7, 11, 19};
+        int index = op.getNumberPositionInArray(myArrayOfInts, 101);
+        System.out.println(index);
+
+        // Lab 11 (Java Arrays), ex 7
+        op.getLinesPattern();
+
+        // Lab 11 (Java Arrays), ex 8
+
     }
 }

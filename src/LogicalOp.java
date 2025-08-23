@@ -324,4 +324,65 @@ public class LogicalOp {
             x++;
         }
     }
+
+    // Lab 11 (Java Arrays), ex 2
+    public void getArrayTo100() {
+        int[] myIntArray = new int[100];
+        for (int i = 1; i <= 100; i++) {
+            myIntArray[i - 1] = i;
+            System.out.println(myIntArray[i-1]);
+        }
+    }
+
+    // Lab 11 (Java Arrays), ex 3
+    public int[] getEvenArrayTo100(int[] arr){
+        int index = 0;
+        for (int i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                arr[index] = i;
+                index++;
+            }
+        }
+        return arr;
+    }
+
+    // Lab 11 (Java Arrays), ex 4
+    public float getAverageMyArray(int[] myArray) {
+        float sum = 0;
+        for (int i = 0; i < myArray.length; i++) {
+            sum = sum + myArray[i];
+        }
+        return (sum / myArray.length);
+    }
+
+    // Lab 11 (Java Arrays), ex 5
+    public boolean getMyStringArray(String[] myStringArray, String input){
+        for(int i = 0; i < myStringArray.length; i++){
+            if (myStringArray[i].equals(input)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Lab 11 (Java Arrays), ex 6
+    public int getNumberPositionInArray(int[] myArray, int x){
+        for(int i = 0; i < myArray.length; i++){
+            if(myArray[i] == x){
+                return i;
+            }
+        }
+        return 0;
+    }
+
+    // Lab 11 (Java Arrays), ex 7
+    public void getLinesPattern() {
+        char[] line = {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-',};
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(line);
+        }
+    }
+
+    // Lab 11 (Java Arrays), ex 8
+
 }

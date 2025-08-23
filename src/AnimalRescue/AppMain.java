@@ -43,5 +43,28 @@ public class AppMain {
         System.out.println("The vet name is: " + animalVet.getVetName());
         animalVet.setVetSpecialty("Nutrition");
         System.out.println("The vet specialty is: " + animalVet.getVetSpecialty());
+
+        // Some examples for Inheritance Homework
+        Dog max = new Dog();
+        max.setAnimalName("Max");
+        max.setAnimalAge(3);
+        System.out.println(max.getAnimalName());
+        System.out.println(max.getAnimalAge());
+
+        Cat myCat = new Cat();
+        myCat.setAnimalName("Tom");
+        myCat.setAnimalHungerLevel(5);
+        System.out.println(myCat.getAnimalName());
+        System.out.println("The cat hunger level is: " + myCat.getAnimalHungerLevel());
+
+        Fox myFox = new Fox();
+        myFox.setAnimalName("Foxy");
+        myFox.setAnimalFavouriteActivity("hunting");
+        System.out.println(myFox.getAnimalName());
+        System.out.println("Foxy's favourite activity is: " + myFox.getAnimalFavouriteActivity());
+
+        FruitsFood fruit = new FruitsFood();
+        fruit.setFoodName("Apple");
+        System.out.println(fruit.getFoodName());
     }
 }

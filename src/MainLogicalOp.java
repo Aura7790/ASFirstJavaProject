@@ -1,7 +1,9 @@
+import java.util.Arrays;
+
 public class MainLogicalOp {
     public static void main(String[] args) {
         LogicalOp op = new LogicalOp();
-        /*
+
         // Lab 9, exercitiul 3
         int biggest = op.checkBiggerNumber(11,99);
         System.out.println("The bigger number is: " + biggest);
@@ -128,8 +130,7 @@ public class MainLogicalOp {
 
         // Lab 10, ex 10
         op.printCozaLozaWoza();
-    }
-    */
+
         // Lab 11 (Java Arrays), ex 2
         op.getArrayTo100();
 
@@ -145,7 +146,8 @@ public class MainLogicalOp {
         // Lab 11 (Java Arrays), ex 4
         int[] myArray = {15, 17, 22, 1, 44};
         float avg = op.getAverageMyArray(myArray);
-        System.out.println("\n" + avg);
+        System.out.println();
+        System.out.println(avg);
 
         // Lab 11 (Java Arrays), ex 5
         String[] myStringArr = {"map", "car", "Flower", "cat", "Book"};
@@ -154,7 +156,7 @@ public class MainLogicalOp {
         System.out.println(op.getMyStringArray(myStringArr, "morning"));
 
         // Lab 11 (Java Arrays), ex 6
-        int[] myArrayOfInts = {22, 45, 99, 101, 78, 43, 7, 11, 19};
+        int[] myArrayOfInts = new int [100];
         int index = op.getNumberPositionInArray(myArrayOfInts, 101);
         System.out.println(index);
 
@@ -162,6 +164,18 @@ public class MainLogicalOp {
         op.getLinesPattern();
 
         // Lab 11 (Java Arrays), ex 8
+        int[] numbers = {7, 27, 37, 47, 57, 67, 17};
+        int numberToRemove = 7;
+        int[] result = op.deleteNumberFromArray(numbers, numberToRemove);
+        System.out.println(Arrays.toString(result));
 
+        // Lab 11 (Java Arrays), ex 9
+        int[] myResult = op.getSecondSmallesNumber(numbers);
+        System.out.println(Arrays.toString(myResult));
+
+        // Lab 11 (Java Arrays), ex 10
+        int[] arr1 = {9, 19, 29, 59, 39, 49, 9, 22, 0, 30};
+        int[] arr2 = new int[10];
+        System.out.println(Arrays.toString(op.copyArrayFromOneToAnother(arr1, arr2)));
     }
 }

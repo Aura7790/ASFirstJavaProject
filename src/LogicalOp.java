@@ -328,9 +328,9 @@ public class LogicalOp {
     // Lab 11 (Java Arrays), ex 2
     public void getArrayTo100() {
         int[] myIntArray = new int[100];
-        for (int i = 1; i <= 100; i++) {
-            myIntArray[i - 1] = i;
-            System.out.println(myIntArray[i-1]);
+        for (int i = 0; i < myIntArray.length; i++) {
+            myIntArray[i] = i + 1;
+            System.out.println(myIntArray[i]);
         }
     }
 
@@ -384,5 +384,47 @@ public class LogicalOp {
     }
 
     // Lab 11 (Java Arrays), ex 8
+    public int[] deleteNumberFromArray(int[] myArray, int x){
+        // count elements not matching with x
+        int size = 0;
+        for(int i =0; i < myArray.length; i++){
+            if(myArray[i] != x){
+                size ++;
+            }
+        }
+        // create a new array and copy elements one bye one except x
+        int[] newArray = new int[size];
+        int index = 0;
+        for(int i = 0; i < myArray.length; i++){
+            if (myArray[i] != x) {
+                newArray[index] = myArray[i];
+                index ++;
+            }
+        }
+        return newArray;
+    }
+
+    // Lab 11 (Java Arrays), ex 9
+    public int[] getSecondSmallesNumber(int[] myArray){
+        for(int i = 0; i < myArray.length; i++){
+            for(int j = i + 1; j < myArray.length; j++){
+                if(myArray[i] > myArray[j]){
+                    int temp = myArray[j];
+                    myArray[j] = myArray[i];
+                    myArray[i] = temp;
+                }
+            }
+        }
+        return new int[]{myArray[1]};
+    }
+
+    // Lab 11 (Java Arrays), ex 10
+    public int[] copyArrayFromOneToAnother(int[] firstArray, int[] newArray) {
+        for (int i = 0, j = 0; i < firstArray.length; i++) {
+            newArray[j] = firstArray[i];
+            j++;
+        }
+        return newArray;
+    }
 
 }

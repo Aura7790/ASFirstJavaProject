@@ -607,7 +607,7 @@ public class LogicalOp {
     // si unul de tip String. Metoda sa adauge parametrul de tip String in lista primita, iar parametrul de tip intreg
     // reprezinta pozitia la care sa fie pus acel String.
 
-    public void printStringList(List<String> myList, int stringPosition, String myString){
+    public void addStringToList(List<String> myList, int stringPosition, String myString){
         if (stringPosition >= 0 && stringPosition <= myList.size()) {
             myList.add(stringPosition, myString);
             System.out.println(myList);

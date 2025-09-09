@@ -263,8 +263,8 @@ public class MainLogicalOp {
         listS.add("clone");
         System.out.println();
         // System.out.println(listS + "\n");
-        op.printStringList(listS, 9, "apple");
-        op.printStringList(listS, 4, "apple");
+        op.addStringToList(listS, 9, "apple");
+        op.addStringToList(listS, 4, "apple");
 
         // 6. Scrieti o metoda Java, care sa primeasca doi parametri.
         // Primul dintre ei va fi o Lista, iar metoda sa ia al doilea parametru si sa il adauge pe prima pozitie din lista.

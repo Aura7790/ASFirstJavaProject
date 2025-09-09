@@ -262,7 +262,6 @@ public class MainLogicalOp {
         listS.add("map");
         listS.add("clone");
         System.out.println();
-        // System.out.println(listS + "\n");
         op.addStringToList(listS, 9, "apple");
         op.addStringToList(listS, 4, "apple");
 

@@ -277,5 +277,22 @@ public class MainLogicalOp {
         // 8. Scrieti o metoda Java care sa primeasca o Lista si sa returneze cel mai mare numar din ea.
         List<Integer> myNumbers = Arrays.asList(10, 17, 101, 19, 7, 209);
         System.out.println(op.getMax(myNumbers));
+
+        // Lab 12 - Tema optionala Lists
+        // 1. Scrieti o metoda Java care sa schimbe pozitia a doua elemente intr-o Lista
+        List<String> fruits = new ArrayList<>(Arrays.asList("Mango", "Banana", "Orange", "Pear", "Apple", "Lemon"));
+        op.swapElements(fruits, 0, 4);
+
+        // 2. Scrieti o metoda Java care sa primeasca o Lista si sa returneze o alta lista, care sa contina doar numerele
+        // pare din lista primita.
+        List<Integer> numbers7 = Arrays.asList(2, 17, 22, 10, 19, 13, 3, 55, 404, 100);
+        List<Integer> myEvens = op.getEvenNumbers(numbers7);
+        System.out.println(myEvens);
+
+        // 3. Scrieti o metoda Java care sa primeasca parametru o Lista nesortata, si sa returneze Lista sortata crescator.
+        // Atentie, sortarea sa se faca programatic(adica logica sa fie scrisa de voi), si nu folosit librarie externa,
+        // precum Collection.sort().
+        List<Integer> mySortedList = op.getSortedList(numbers7);
+        System.out.println(mySortedList);
     }
 }

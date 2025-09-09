@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class LogicalOp {
@@ -645,4 +646,52 @@ public class LogicalOp {
         return max;
     }
 
+    // Lab 12 - Tema optionala Lists
+    // 1. Scrieti o metoda Java care sa schimbe pozitia a doua elemente intr-o Lista
+    public void swapElements(List<String> myList, int index1, int index2){
+        if (index1 >= 0 && index1 < myList.size() && index2 >= 0 && index2 < myList.size()){
+            String temp = myList.get(index1);
+            myList.set(index1, myList.get(index2));
+            myList.set(index2, temp);
+            System.out.println("Swapped elements list: " + myList);
+        }
+        else {
+            System.out.println("Invalid indexes!");
+        }
+    }
+
+    // 2. Scrieti o metoda Java care sa primeasca o Lista si sa returneze o alta lista, care sa contina doar numerele
+    // pare din lista primita.
+
+    public List<Integer> getEvenNumbers(List<Integer> myList){
+        // create the new list that stores the even numbers
+        List<Integer> evens = new ArrayList<>();
+        for (int i = 0; i < myList.size(); i++){
+            if (myList.get(i) % 2 == 0){
+                evens.add(myList.get(i));
+            }
+        }
+        return evens;
+    }
+
+    // 3. Scrieti o metoda Java care sa primeasca parametru o Lista nesortata, si sa returneze Lista sortata crescator.
+    // Atentie, sortarea sa se faca programatic(adica logica sa fie scrisa de voi), si nu folosit librarie externa,
+    // precum Collection.sort().
+    public List<Integer> getSortedList(List<Integer> myList){
+        // copy of original list
+        List<Integer> sortedList = new ArrayList<>(myList);
+        int n  = sortedList.size();
+        // Bubble sort algorithm
+        for (int i = 0; i < n - 1; i++){
+            for (int j = 0; j < n - i - 1; j++){
+                if (sortedList.get(j) > sortedList.get(j + 1)){
+                    // Swap values
+                    int temp =  sortedList.get(j);
+                    sortedList.set(j, sortedList.get(j + 1));
+                    sortedList.set(j + 1, temp);
+                }
+            }
+        }
+        return sortedList;
+    }
 }

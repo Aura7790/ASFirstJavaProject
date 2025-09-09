@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MainLogicalOp {
     public static void main(String[] args) {
@@ -218,5 +220,62 @@ public class MainLogicalOp {
         for (int p = 0; p < sortedNumbers.length; p++){
             System.out.print(sortedNumbers[p] + " ");
         }
+
+        // Lab 12 - Lists
+        // 1. Scrieti o metoda Java, care sa primeasca parametru o Lista,
+        // si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou.
+
+        List<Integer> listMyList = new ArrayList<>();
+        listMyList.add(7);
+        listMyList.add(17);
+        listMyList.add(0);
+        System.out.println();
+        op.printParamsFromList(listMyList);
+
+        // 2. Scrieti o metoda Java, care sa primeasca doi parametri: un parametru sa fie o lista de numere, si celalalt un numar (real sau intreg).
+        // Metoda sa adauge numarul primit ca si parametru la final de lista.
+        List<Integer> listA = new ArrayList<>();
+        listA.add(5);
+        listA.add(15);
+        listA.add(151);
+        op.addNumberToList(listA, 22);
+
+        // 3. Scrieti o metoda Java, care sa primeasca doi parametri: un parametru de tip Lista, iar celalalt un numar intreg.
+        // Sa se parcurga lista si sa afiseze, pe rand, toate valorile din lista, fiecare pe rand nou, pornind de la numarul
+        // intreg primit ca si parametru.
+        List<Integer> newList = Arrays.asList(5, 8, 10, 12, 15, 18, 21, 17, 2, 3);
+        op.printMyList(newList, 8);
+        op.printMyList(newList, 99);
+
+        // 4. Scrieti o metoda Java, care sa primeasca parametru o Lista, si sa afiseze, pe rand, toate valorile din lista,
+        // dar invers(de la capat la inceput).
+
+        List<Integer> listB = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        op.printReversedList(listB);
+
+        // 5. Scrieti o metoda Java, care sa primeasca trei parametrii: unul de tip Lista de String-uri, unul de tip intreg,
+        // si unul de tip String. Metoda sa adauge parametrul de tip String in lista primita, iar parametrul de tip intreg
+        // reprezinta pozitia la care sa fie pus acel String.
+        List<String> listS = new ArrayList<>();
+        listS.add("cat");
+        listS.add("dog");
+        listS.add("map");
+        listS.add("clone");
+        System.out.println();
+        // System.out.println(listS + "\n");
+        op.printStringList(listS, 9, "apple");
+        op.printStringList(listS, 4, "apple");
+
+        // 6. Scrieti o metoda Java, care sa primeasca doi parametri.
+        // Primul dintre ei va fi o Lista, iar metoda sa ia al doilea parametru si sa il adauge pe prima pozitie din lista.
+        System.out.println(op.getMyList(listS, "mango"));
+
+        // 7. Scrieti o metoda Java care sa primeasca parametru o Lista, si sa afiseze ce valori are lista, si ce pe ce pozitie.
+        // (Ex: “Pe pozitia 1 valoare este 4”).
+        op.printMyList(listS);
+
+        // 8. Scrieti o metoda Java care sa primeasca o Lista si sa returneze cel mai mare numar din ea.
+        List<Integer> myNumbers = Arrays.asList(10, 17, 101, 19, 7, 209);
+        System.out.println(op.getMax(myNumbers));
     }
 }

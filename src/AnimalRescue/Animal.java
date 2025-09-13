@@ -67,4 +67,20 @@ public class Animal {
     public void setAnimalFavouriteActivity(String animalFavouriteActivity){
         this.animalFavouriteActivity = animalFavouriteActivity;
     }
+
+    public void eat() {
+
+    }
+
+    public void sleep(){
+
+    }
+
+    public void speak() {
+
+    }
+
+    public void run() {
+
+    }
 }

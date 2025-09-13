@@ -50,18 +50,42 @@ public class AppMain {
         max.setAnimalAge(3);
         System.out.println(max.getAnimalName());
         System.out.println(max.getAnimalAge());
+        // Overriding
+        max.bite();
+        max.sleep();
+        max.eat();
+        max.speak();
+        max.run();
 
         Cat myCat = new Cat();
         myCat.setAnimalName("Tom");
         myCat.setAnimalHungerLevel(5);
         System.out.println(myCat.getAnimalName());
         System.out.println("The cat hunger level is: " + myCat.getAnimalHungerLevel());
+        // Overriding
+        myCat.eat();
+        myCat.purr();
+        myCat.run();
 
         Fox myFox = new Fox();
         myFox.setAnimalName("Foxy");
         myFox.setAnimalFavouriteActivity("hunting");
         System.out.println(myFox.getAnimalName());
         System.out.println("Foxy's favourite activity is: " + myFox.getAnimalFavouriteActivity());
+        // Overriding
+        myFox.eat();
+        myFox.run();
+
+        Duck myDuck = new Duck();
+        // Overriding
+        myDuck.eat();
+        myDuck.speak();
+        myDuck.run();
+
+        Elephant myElphy = new Elephant();
+        // Overriding
+        myElphy.eat();
+        myElphy.run();
 
         FruitsFood fruit = new FruitsFood();
         fruit.setFoodName("Apple");

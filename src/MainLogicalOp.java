@@ -163,7 +163,7 @@ public class MainLogicalOp {
         System.out.println(index);
 
         // Lab 11 (Java Arrays), ex 7
-        op.getLinesPattern();
+        op.printLinesPattern();
 
         // Lab 11 (Java Arrays), ex 8
         int[] numbers = {7, 27, 37, 47, 57, 67, 17};

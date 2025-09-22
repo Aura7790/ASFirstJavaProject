@@ -379,7 +379,7 @@ public class LogicalOp {
     }
 
     // Lab 11 (Java Arrays), ex 7
-    public void getLinesPattern() {
+    public void printLinesPattern() {
         char[] line = {'-', '-', '-', '-', '-', '-', '-', '-', '-', '-',};
         for (int i = 0; i <= 10; i++) {
             System.out.println(line);

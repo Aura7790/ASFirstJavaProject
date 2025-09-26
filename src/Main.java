@@ -87,7 +87,7 @@ public class Main {
             System.out.println("66. Lab 12.5 - Tema - Try-Catch - Ex 5");
             System.out.println("67. Lab 12.5 - Tema - Try-Catch - Ex 6");
             System.out.println("0. Exit");
-            System.out.print("Choose an option: ");
+            System.out.print("Hello! Choose an option: ");
 
             try {
                 option = Integer.parseInt(scanner.nextLine());

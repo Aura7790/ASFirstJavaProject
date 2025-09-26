@@ -3,7 +3,6 @@ import java.util.List;
 public class MainRead {
     public static void main(String[] args) {
         Read read = new Read();
-        /*
         int userIntNumber = read.getIntNumberFromKeyboard();
         System.out.println("You entered: " + userIntNumber);
 
@@ -22,11 +21,9 @@ public class MainRead {
             System.out.println(num);
         }
 
-         */
-
-        List<Integer> result = read.getListFromKeyboard(5); // Example: reads 5 integers
+        List<Integer> myResult = read.getListFromKeyboard(5); // Example: reads 5 integers
         System.out.println("You entered:");
-        for (int num : result) {
+        for (int num : myResult) {
             System.out.println(num);
         }
     }

@@ -694,4 +694,27 @@ public class LogicalOp {
         }
         return sortedList;
     }
+
+    // Lab 12.5 - Tema - Try-Catch - Ex 5
+        public void printNumberAtIndex(int [] myArray, int index){
+            try {
+                System.out.println("Element at index " + index + ": " + myArray[index]);
+            } catch (ArrayIndexOutOfBoundsException e) {
+                System.out.println("Inside catch, number too large!");
+            } catch (Exception e) {
+                System.out.println("Unexpected error: " + e.getMessage());
+            }
+        }
+    // Lab 12.5 - Tema - Try-Catch - Ex 6
+    public void waitInSeconds(int seconds) {
+        try {
+            System.out.println("Waiting for " + seconds + " second(s)...");
+            Thread.sleep(seconds * 1000L); // Convert seconds to milliseconds
+            System.out.println("Done waiting.");
+        } catch (InterruptedException e) {
+            System.out.println("The wait was interrupted: " + e.getMessage());
+            Thread.currentThread().interrupt(); // Restore interrupt status
+        }
+    }
+
 }

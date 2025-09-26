@@ -293,5 +293,13 @@ public class MainLogicalOp {
         // precum Collection.sort().
         List<Integer> mySortedList = op.getSortedList(numbers7);
         System.out.println(mySortedList);
+
+        // Lab 12.5 - Tema - Try-Catch - Ex 5
+        int[] arrayOfNumbers = {11, 22, 33, 44, 55, 66, 77};
+        op.printNumberAtIndex(arrayOfNumbers, 2);
+        op.printNumberAtIndex(arrayOfNumbers, 8);
+
+        // Lab 12.5 - Tema - Try-Catch - Ex 6
+        op.waitInSeconds(5);
     }
 }

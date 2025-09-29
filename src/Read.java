@@ -52,15 +52,8 @@ public class Read {
 
     public int[] getArrayFromKeyboard(int size){
         int[] numbers = new int[size];
-        System.out.println("Enter " + size + " integer numbers:");
-
         for (int i = 0; i < size; i++) {
-            System.out.print("Element " + i + ": ");
-            while (!scanner.hasNextInt()) {
-                System.out.print("Invalid input. Please enter an integer: ");
-                scanner.next(); // discard invalid input
-            }
-            numbers[i] = scanner.nextInt();
+            numbers[i] = getIntNumberFromKeyboard(); // using the method created above
         }
         return numbers;
     }

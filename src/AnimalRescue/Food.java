@@ -1,12 +1,17 @@
 package AnimalRescue;
 
-public class Food {
+public abstract class Food {
     private String foodName;
     private double foodPrice;
     private int foodQty;
     private boolean foodAvailability;
 
-    // Getters
+    public Food(String foodName, double foodPrice, int foodQty, boolean foodAvailability){
+        this.foodName = foodName;
+        this.foodPrice = foodPrice;
+        this.foodQty = foodQty;
+        this.foodAvailability = foodAvailability;
+    }
     public String getFoodName() {
         return foodName;
     }
@@ -23,21 +28,9 @@ public class Food {
         return foodAvailability;
     }
 
-    // Setters
-
-    public void setFoodName(String foodName) {
-        this.foodName = foodName;
+    public double getTotalCost() {
+        return foodPrice * foodQty;
     }
 
-    public void setFoodPrice(double foodPrice) {
-        this.foodPrice = foodPrice;
-    }
-
-    public void setFoodQty(int foodQty) {
-        this.foodQty = foodQty;
-    }
-
-    public void setFoodAvailability(boolean foodAvailability) {
-        this.foodAvailability = foodAvailability;
-    }
+    public abstract void describeAnimalFood();
 }

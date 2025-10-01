@@ -1,10 +1,14 @@
 package AnimalRescue;
 
-public class Vet {
+public abstract class Vet {
     private String vetName;
     private String vetSpecialty;
 
-    // Getters
+    public Vet(String vetName, String vetSpecialty){
+        this.vetName = vetName;
+        this.vetSpecialty = vetSpecialty;
+    }
+
     public String getVetName() {
         return vetName;
     }
@@ -13,12 +17,5 @@ public class Vet {
         return vetSpecialty;
     }
 
-    // Setters
-    public void setVetName(String vetName) {
-        this.vetName = vetName;
-    }
-
-    public void setVetSpecialty(String vetSpecialty) {
-        this.vetSpecialty = vetSpecialty;
-    }
+    public abstract void treatAnimal(String animalName);
 }

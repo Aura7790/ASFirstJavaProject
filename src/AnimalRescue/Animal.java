@@ -1,6 +1,6 @@
 package AnimalRescue;
 
-public class Animal {
+public abstract class Animal {
     private String animalName;
     private int animalAge;
     private int animalHealthLevel; // from 1 to 10
@@ -8,6 +8,10 @@ public class Animal {
     private int animalSpiritState; // from 1 to 10
     private String animalFavouriteFood;
     private String animalFavouriteActivity;
+
+    public Animal(String animalName) {
+        this.animalName = animalName;
+    }
 
     // Getters
 
@@ -68,19 +72,11 @@ public class Animal {
         this.animalFavouriteActivity = animalFavouriteActivity;
     }
 
-    public void eat() {
+    public abstract void eat();
 
-    }
+    public abstract void sleep();
 
-    public void sleep(){
+    public abstract void speak();
 
-    }
-
-    public void speak() {
-
-    }
-
-    public void run() {
-
-    }
+    public abstract void run();
 }

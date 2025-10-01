@@ -1,17 +1,25 @@
 package AnimalRescue;
 
-public class Cat extends Animal{
+public abstract class Cat extends Animal{
+    Cat(String name) {
+        super(name);
+    }
     @Override
     public void eat() {
-        System.out.println("Eats only Cat food");
+        System.out.println(getAnimalName() + " Eats only Cat food");
     }
 
-    public void purr() {
-        System.out.println("Purrrrr!");
+    @Override
+    public void sleep() {
+        System.out.println(getAnimalName() + " Cat sleeping");
     }
 
     @Override
     public void run() {
-        System.out.println("Cats have their own speed!");
+        System.out.println(getAnimalName() + " Running... Cats have their own speed!");
+    }
+
+    public void purr() {
+        System.out.println(getAnimalName() + " Purrrrr!");
     }
 }

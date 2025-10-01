@@ -1,14 +1,22 @@
 package AnimalRescue;
 
 public class Duck extends Animal{
+    Duck(String name) {
+        super(name);
+    }
     @Override
     public void eat() {
-        System.out.println("Duck food: Corn, seeds, grass & loves water!");
+        System.out.println(getAnimalName() + " Duck food: Corn, seeds, grass & loves water!");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println(getAnimalName() + " Duck is sleeping!");
     }
 
     @Override
     public void speak() {
-        System.out.println("Mac Mac!");
+        System.out.println(getAnimalName() + " Mac Mac!");
     }
 
     @Override

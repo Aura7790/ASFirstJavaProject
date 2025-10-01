@@ -1,10 +1,14 @@
 package AnimalRescue;
 
-public class Adopter {
+public abstract class Adopter {
     private String adopterName;
     private int adopterAvailableMoney;
 
-    // Getters
+    public Adopter(String adopterName, int adopterAvailableMoney){
+        this.adopterName = adopterName;
+        this.adopterAvailableMoney = adopterAvailableMoney;
+    }
+
     public String getAdopterName(){
         return adopterName;
     }
@@ -13,12 +17,6 @@ public class Adopter {
         return adopterAvailableMoney;
     }
 
-    // Setters
-    public void setAdopterName(String adopterName) {
-        this.adopterName = adopterName;
-    }
+    public abstract void adoptAnimal(String animalName);
 
-    public void setAdopterAvailableMoney(int adopterAvailableMoney) {
-        this.adopterAvailableMoney = adopterAvailableMoney;
-    }
 }

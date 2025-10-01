@@ -1,13 +1,15 @@
 package AnimalRescue;
 
-public class Activities {
-    private String activityName;
-    // Getters
-    public String getActivityName(){
-        return activityName;
+public abstract class Activities {
+    private String animalName;
+
+    public Activities(String animalName) {
+        this.animalName = animalName;
     }
-    // Setters
-    public void setActivityName(String activityName){
-        this.activityName = activityName;
+
+    public String getAnimalName(){
+        return animalName;
     }
+
+    public abstract void performActivity();
 }

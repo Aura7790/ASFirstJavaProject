@@ -1,30 +1,33 @@
 package AnimalRescue;
 
 public class Dog extends Animal{
+    Dog(String name) {
+        super(name);
+    }
     public void tailWagging(){
-        System.out.println("Wagging the tail!");
+        System.out.println(getAnimalName() + " is wagging the tail!");
     }
     public void bite(){
-        System.out.println("They bite bad ppl!");
+        System.out.println(getAnimalName() + " bites bad ppl!");
     }
 
     @Override
     public void eat() {
-        System.out.println("Dogs eat dog food only!");
+        System.out.println(getAnimalName() + " is eating dry and wet dog food!");
     }
 
     @Override
     public void sleep() {
-        System.out.println("ZZZZZZzzzzzz!");
+        System.out.println(getAnimalName() + " is sleeping ZZZZZZzzzzzz!");
     }
 
     @Override
     public void speak() {
-        System.out.println("Woof woof!");
+        System.out.println(getAnimalName() + " Woof woof!");
     }
 
     @Override
     public void run() {
-        System.out.println("Dog is running!!");
+        System.out.println(getAnimalName() + " Dog is running!!");
     }
 }
